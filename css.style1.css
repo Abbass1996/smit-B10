@@ -1,0 +1,30 @@
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+a{
+    font-size: 50px;
+    text-decoration: none;
+    border: 2px solid black;
+    padding: 10px 30px;
+    overflow: hidden;
+    position: relative;
+}
+a::before{
+    content: '';
+    background-color: orange;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    transform: rotate(90deg);
+    transform-origin: bottom left;
+    transition-duration: 2s;
+}   
+a:hover::before{
+    transform: translate(0px);
+}
